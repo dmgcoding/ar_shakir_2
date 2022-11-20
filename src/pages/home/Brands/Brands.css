@@ -1,0 +1,34 @@
+.w__home__brands{
+    width: 100%;
+}
+
+.w__home__brands__container{
+    padding: 5rem 3rem;
+}
+
+.w__home__brands__container-title{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--black);
+    padding: 1.5rem;
+}
+
+.w__home__brands__container-brands{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.w__home__brands__container-brands img{
+    height: 1.4rem;
+    margin: 1.2rem;
+}
+
+
+
+
+
+

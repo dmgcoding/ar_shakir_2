@@ -11,12 +11,12 @@ const Home = () => {
       <Brands />
       <Services />
       <Process />
-      <App />
+      {/* <App />
       <CTO />
       <Pricing />
       <Testimonials />
       <Banner />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

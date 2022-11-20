@@ -1,0 +1,123 @@
+.w__home__services{
+    width: 100%;
+    position: relative;
+}
+
+.w__home__services-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.w__home__services__container{
+    padding: 0 3rem;
+}
+
+.w__home__services__container-title{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w__home__services__container-title-title{
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.w__home__services__container-title-heading{
+    max-width: 50rem;
+    padding: 0;
+    margin: 1rem 0;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.03em;
+    color: var(--black);
+}
+
+.w__home__services__container-boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.w__home__services__container-boxes-box{
+    width: 22%;
+    max-height: 15rem;
+    margin: 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.w__home__services__container-boxes-box-iconbox{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+}
+
+.w__home__services__container-boxes-box-iconbox img{
+    width: 2rem;
+}
+
+.w__home__services__container-boxes-box-heading{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: var(--black);
+}
+
+.w__home__services__container-boxes-box-details{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: var(--textgrey);
+}
+
+/* box 2 */
+.w__home__services__container-boxes-box2{
+    width: 22%;
+    max-height: 15rem;
+    margin: 1rem;
+    border: none;
+    padding: 2.5rem;
+    display: flex;
+    background-color: var(--green);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+
+.w__home__services__container-boxes-box2-heading{
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: var(--white);
+}
+
+.w__home__services__container-boxes-box2-details{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: var(--white);
+}

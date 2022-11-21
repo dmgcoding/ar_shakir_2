@@ -21,14 +21,7 @@ export {default as coverImg1} from './../../assets/home/cover/cover_img1.png';
 export {default as coverImg2} from './../../assets/home/cover/cover_img2.png';
 export {default as coverImg3} from './../../assets/home/cover/cover_img3.png';
 export {default as coverImg4} from './../../assets/home/cover/cover_img4.png';
-//services
-export {default as services_icon1} from './../../assets/home/services/briefcase.svg';
-export {default as services_icon2} from './../../assets/home/services/gem2.svg';
-export {default as services_icon3} from './../../assets/home/services/headset.svg';
-export {default as services_icon4} from './../../assets/home/services/lighting.svg';
-export {default as services_icon5} from './../../assets/home/services/people.svg';
-export {default as services_icon6} from './../../assets/home/services/ui-checks-grid.svg';
-export {default as services_icon7} from './../../assets/home/services/vector-pen.svg';
+
 //process
 export {default as process_curve_down} from './../../assets/home/process/process_curve_down.png';
 export {default as process_curve_up} from './../../assets/home/process/process_curve_up.png';

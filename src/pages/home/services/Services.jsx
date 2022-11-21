@@ -1,40 +1,50 @@
 import React from 'react'
 import './Services.css'
-import { services_icon1,services_icon2,services_icon3,services_icon4,services_icon5,services_icon6,services_icon7 } from '../imports';
+
+import icon1 from './../../../assets/home/services/briefcase.svg'
+import icon2 from './../../../assets/home/services/gem2.svg'
+import icon3 from './../../../assets/home/services/headset.svg'
+import icon4 from './../../../assets/home/services/lighting.svg'
+import icon5 from './../../../assets/home/services/people.svg'
+import icon6 from './../../../assets/home/services/ui-checks-grid.svg'
+import icon7 from './../../../assets/home/services/vector-pen.svg'
+
+import bg from './../../../assets/home/services/services_bg.svg'
+
 
 const allServices = [
   {
-    icon: services_icon1,
+    icon: icon1,
     heading: "Project Management",
     details: "30 options available"
   },
   {
-    icon: services_icon2,
+    icon: icon2,
     heading: "Web & Mobile Developement",
     details: "30 options available"
   },
   {
-    icon: services_icon3,
+    icon: icon3,
     heading: "Customer Support",
     details: "30 options available"
   },
   {
-    icon: services_icon4,
+    icon: icon4,
     heading: "Human Resources",
     details: "30 options available"
   },
   {
-    icon: services_icon5,
+    icon: icon5,
     heading: "Design & Creatives",
     details: "30 options available"
   },
   {
-    icon: services_icon6,
+    icon: icon6,
     heading: "Marketing & Communication",
     details: "30 options available"
   },
   {
-    icon: services_icon7,
+    icon: icon7,
     heading: "Business Development",
     details: "30 options available"
   },
@@ -45,7 +55,7 @@ const Services = () => {
   const serviceBox = (icon, title, details)=>{
     return (
       <>
-      <div className="w__home__services__container-boxes-box">
+      <div key={title} className="w__home__services__container-boxes-box">
             <div className="w__home__services__container-boxes-box-iconbox">
               <img src={icon} alt="" />
             </div>
@@ -60,11 +70,11 @@ const Services = () => {
   }
 
   return (
-    <div className="w__home__services">
-      <div className="w__home__services-bg">
-        <img src="" alt="" />
-      </div>
-      <div className="w__home__services__container">
+    <div className="w__home__services" style={{backgroundImage: `url(${bg})`}}>
+      {/* <div className="w__home__services-bg">
+        <img src={bg} alt="" />
+      </div> */}
+      <div className="w__home__services__container" >
         <div className="w__home__services__container-title">
           <p className="w__home__services__container-title-title">
           OUR SERVICES

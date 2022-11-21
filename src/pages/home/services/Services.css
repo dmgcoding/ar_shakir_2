@@ -1,6 +1,8 @@
 .w__home__services{
     width: 100%;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .w__home__services-bg{
@@ -8,6 +10,15 @@
     top: 0;
     right: 0;
     width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-color: red;
+}
+
+.w__home__services-bg img{
+    position: relative;
+    right: 0;
+    height: 100%;
 }
 
 .w__home__services__container{

@@ -1,0 +1,119 @@
+.w__home__process{
+    width: 100%;
+}
+
+.w__home__process__container{
+    padding: 5rem 3rem;
+}
+
+.w__home__process__container-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.w__home__process__container-title img{
+    height: 4.5rem;
+}
+
+.w__home__process__container-title-heading{
+    max-width: 35rem;
+    margin: 0;
+    padding: 1rem;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+    color: var(--black);
+    text-align: center;
+}
+
+.w__home__process__container-title-subheading{
+    max-width: 35rem;
+    margin: 0;
+    padding: 0;
+    color: var(--textgrey);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.w__home__process__container-processbox{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.w__home__process__container-processbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+.w__home__process__container-processbox-box{
+    width: 33%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w__home__process_container-processbox-curvedown{
+    position: absolute;
+    left: 24%;
+    top: 30%;
+}
+
+.w__home__process_container-processbox-curveup{
+    position: absolute;
+    left: 59%;
+    top: 26%;
+}
+
+.w__home__process__container-processbox-box__imgbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w__home__process__container-processbox-box__imgbox:hover > .w__home__process__container-processbox-box__imgbox-img{
+    border: none;
+}
+
+.w__home__process__container-processbox-box__imgbox-number{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.w__home__process__container-processbox-box__imgbox-img{
+    width: 80%;
+    border-radius: 50%;
+    padding: 2rem;
+    border: 1px dotted grey;
+}
+
+.w__home__process__container-processbox-box-step{
+    color: var(--black);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 115%;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+
+.w__home__process__container-processbox-box-details{
+    color: var(--textgrey);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}

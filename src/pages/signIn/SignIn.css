@@ -1,0 +1,110 @@
+.w__signin{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.w__signin-left{
+    width: 55%;
+}
+
+.w__signin-right{
+    width: 45%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.w__signin-right-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green);
+    opacity: 0.6;
+}
+
+.w__signin-right > img{
+    width: 100%;
+    height: 100vh;
+}
+
+.w__signin-left__form{
+    flex: auto;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w__signin-left__form__container{
+    max-width: 30rem;
+}
+
+.w__signin-left__form__container-heading{
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.w__signin-left__form__container-subheading{
+    color: var(--textgrey);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.w__signin-left__form__container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0.7rem 0 0 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.w__signin-left__form__container-input:hover{
+    border: 1px solid blue;
+    cursor: text;
+}
+
+.w__signin-left__form__container-input > label{
+    color: rgb(182, 182, 182);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.w__signin-left__form__container-input > input{
+    color: rgb(182, 182, 182);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0.2rem 0 0 0;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.w__signin-left__form__container-input > input::placeholder{
+    color: var(--textgrey);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.w__signin-left__form__container > button{
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--green);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import './Footer.css'
 import twitter from './../../assets/icons/twitter.png'
 import linkedin from './../../assets/icons/linkedin.png'
 import messenger from './../../assets/icons/messenger.png'
@@ -9,11 +8,12 @@ import meta from './../../assets/icons/meta.png'
 import email from './../../assets/icons/email.png'
 import call from './../../assets/icons/call.png'
 import logo from './../../assets/logo.svg'
+import footerbg from './../../assets/footer-bg.png'
 
 
 const Footer = () => {
   return (
-    <div className="w__footer">
+    <div className="w__footer" style={{backgroundSize: 'cover',backgroundImage: `url(${footerbg})`}}>
       <div className="w__footer__container">
         <div className="w__footer__container-menu">
           <div className="w__footer__container-menu-brand">

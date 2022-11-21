@@ -2,6 +2,7 @@
     width: 100%;
     position: fixed;
     background-color: transparent;
+    z-index: 10;
 }
 
 .w__navbar__container{
@@ -49,6 +50,7 @@
     line-height: 19px;
     color: var(--black);
     margin-right: 2rem;
+    cursor: pointer;
 }
 
 .w__navbar__container-buttons-btn2{

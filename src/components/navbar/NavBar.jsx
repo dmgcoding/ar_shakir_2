@@ -1,8 +1,8 @@
-import React,{useState,useEffect, useRef} from 'react';
+import React,{useState,useEffect} from 'react';
 import './NavBar.css';
 import logo from './../../assets/logo.svg';
 import {GrMenu} from 'react-icons/gr';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   const [hamOpen, setHamOpen] = useState(false);
@@ -38,8 +38,8 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="w__navbar__container-buttons">
-          <Link className='w__navbar__container-buttons-btn1'>Sign in</Link>
-          <Link className='w__navbar__container-buttons-btn2'>Start Free</Link>
+          <Link to='/signin' className='w__navbar__container-buttons-btn1'>Sign in</Link>
+          <Link to='signin' className='w__navbar__container-buttons-btn2'>Start Free</Link>
       </div>
       </>
     );

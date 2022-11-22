@@ -2,11 +2,15 @@ import React,{useState,useEffect} from 'react';
 import './NavBar.css';
 import logo from './../../assets/logo.svg';
 import {GrMenu} from 'react-icons/gr';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [hamOpen, setHamOpen] = useState(false);
   const [smallScreen,setSmallScreen] = useState(false);
+
+  //change navbar on scroll
+  const [changeNavbar, setChangeNavbar] = useState(false)
+
 
   useEffect(() => {
     checkScreenSize();
@@ -23,12 +27,21 @@ const NavBar = () => {
     }
   }
 
+  //chnange bg and padding of navbar on scroll
+  const handlescroll = ()=>{
+    const scrollY = window.scrollY;
+    if(scrollY >= 80)
+      setChangeNavbar(true)
+      else{setChangeNavbar(false)}
+  }
+
   window.addEventListener('resize', checkScreenSize)
+  window.addEventListener('scroll', handlescroll)
 
   const desktopmenu = ()=>{
     return (
       <>
-      <div className="w__navbar__container-menu">
+      <div className="w__navbar__container-menu" >
           <ul>
             <Link><li>Service</li></Link>
             <Link><li>About Us</li></Link>
@@ -79,7 +92,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className="w__navbar">
+    <div className="w__navbar" style={{backgroundColor:`${changeNavbar ? 'white':'transparent'}`, padding: `${changeNavbar ? '0.5rem 0': '0'}`}}>
       <div className="w__navbar__container">
         <img src={logo} alt="ar shakir" className="g-logo" />
         {smallScreen ? mobilemenu() : desktopmenu()}

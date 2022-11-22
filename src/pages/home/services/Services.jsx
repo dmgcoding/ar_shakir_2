@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Services.css'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import icon1 from './../../../assets/home/services/briefcase.svg'
 import icon2 from './../../../assets/home/services/gem2.svg'
 import icon3 from './../../../assets/home/services/headset.svg'
@@ -52,6 +53,10 @@ const allServices = [
 
 const Services = () => {
 
+  useEffect(()=>{
+    Aos.init({duration:1000})
+  },[])
+
   const serviceBox = (icon, title, details)=>{
     return (
       <>
@@ -70,7 +75,7 @@ const Services = () => {
   }
 
   return (
-    <div className="w__home__services" style={{backgroundImage: `url(${bg})`}}>
+    <div data-aos='fade-up' data-aos-once='true' className="w__home__services" style={{backgroundImage: `url(${bg})`}}>
       {/* <div className="w__home__services-bg">
         <img src={bg} alt="" />
       </div> */}

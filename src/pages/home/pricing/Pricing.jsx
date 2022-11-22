@@ -1,4 +1,6 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import './Pricing.css'
 import { pricing_bg_p,pricing_check_icon, pricing_check_icon_bgwhite,pricing_cross_icon} from '../imports'
 import {BsArrowRight} from 'react-icons/bs';
@@ -23,12 +25,17 @@ const boxes = [
 ]
 
 const Pricing = () => {
+  
+  useEffect(()=>{
+    Aos.init({duration:1000})
+  },[])
+
   const renderBox = (classbase, box)=>{
     let checkIcon = pricing_check_icon;
     if(classbase === "box2") checkIcon = pricing_check_icon_bgwhite;
     return (
       <>
-      <div className={`w__home__pricing__container-boxes-${classbase}`}>
+      <div data-aos={`${classbase == 'box1' ? 'fade-right': 'fade-left'}`} data-aos-once='true' className={`w__home__pricing__container-boxes-${classbase}`}>
             <p className={`w__home__pricing__container-boxes-${classbase}-plan`}>
             {box.plan}
             </p>
@@ -69,7 +76,7 @@ const Pricing = () => {
   return (
     <div className="w__home__pricing" style={{backgroundImage: `url(${pricing_bg_p})`}}>
       <div className="w__home__pricing__container">
-        <div className="w__home__pricing__container-texts">
+        <div className="w__home__pricing__container-texts" data-aos='fade-up' data-aos-once='true'>
           <p className="w__home__pricing__container-texts-title">
           PRICING
           </p>

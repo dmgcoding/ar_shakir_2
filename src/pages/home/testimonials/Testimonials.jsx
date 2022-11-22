@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import './Testimonials.css';
 import { quote_icon,star_icon,left_arrow_icon,right_arrow_icon} from '../imports';
 import testimonials_p1 from './../../../assets/home/testimonials/testimonials_p1.webp';
@@ -28,10 +30,15 @@ const testimonials = [
 
 
 const Testimonials = () => {
+
+  useEffect(()=>{
+    Aos.init({duration:1000})
+  },[])
+
   return (
     <div className="w__home__test">
       <div className="w__home__test__container">
-        <div className="w__home__test__container-title">
+        <div className="w__home__test__container-title" data-aos='fade-up'  data-aos-once='true'>
           <p className="w__home__pricing__container-texts-title">
           TESTIMONAILS
           </p>
@@ -42,7 +49,7 @@ const Testimonials = () => {
           Checkout what our clients are saying about us!
           </p>
         </div>
-        <div className="w__home__test__container__slider">
+        <div className="w__home__test__container__slider" data-aos='fade-down'  data-aos-once='true'>
           <img src={left_arrow_icon} alt="" className="w__home__test__container__slider-prevbtn" />
           <img src={right_arrow_icon} alt="" className="w__home__test__container__slider-nextBtn" />
           <div className="w__home__test__container__slider-slide">

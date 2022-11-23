@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import './Testimonials.css';
@@ -8,6 +8,9 @@ import testimonials_p2 from './../../../assets/home/testimonials/testimonials_p2
 import segment from './../../../assets/brand-logos/segment.png';
 import samsung from './../../../assets/brand-logos/samsung.png';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import Slider from "react-slick";
 
 const testimonials = [
   {
@@ -31,9 +34,66 @@ const testimonials = [
 
 const Testimonials = () => {
 
+  const [counter, setCounter] = useState(0)
+
   useEffect(()=>{
     Aos.init({duration:1000})
   },[])
+
+  const nextSlide = ()=>{
+    setCounter(c=>c+1);
+    console.log(counter);
+    const firstSlideId = testimonials[0].id;
+    const firstSlide = document.getElementById(firstSlideId);
+    
+    firstSlide.style.left = `-${counter * 100}%`;
+    
+  }
+
+  const prevSlide = ()=>{
+    setCounter(counter-1);
+    console.log(counter);
+    const firstSlideId = testimonials[0].id;
+    const firstSlide = document.getElementById(firstSlideId);
+
+    firstSlide.style.left = `${counter * 100}%`;
+  }
+
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  const renderSlide = (slide)=>{
+    return (
+      <>
+      <div id={slide.id} className="w__home__test__container__slider-slides-slide">
+            <img className="w__home__test__container__slider-slides-slide-img" src={slide.img} alt="" />
+            <div className="w__home__test__container__slider-slides-slide__content">
+              <img className='w__home__test__container__slider-slides-slide__content-quote' src={quote_icon} alt="" />
+              <div className="w__home__test__container__slider-slides-slide__content-ratings">
+                <img src={star_icon} alt="" />
+                <img src={star_icon} alt="" />
+                <img src={star_icon} alt="" />
+                <img src={star_icon} alt="" />
+                <img src={star_icon} alt="" />
+              </div>
+              <p>{slide.t}</p>
+              <div className="w__home__test__container__slider-slides-slide__content-author">
+                <div className="w__home__test__container__slider-slides-slide__content-author-details">
+                  <div style={{color: 'black'}}>{slide.name}</div>
+                  <div style={{color:'grey'}}>{slide.post}</div>
+                </div>
+                <img src={slide.icon} alt="" />
+              </div>
+            </div>
+          </div>
+      </>
+    )
+  }
 
   return (
     <div className="w__home__test">
@@ -50,29 +110,13 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="w__home__test__container__slider" data-aos='fade-down'  data-aos-once='true'>
-          <img src={left_arrow_icon} alt="" className="w__home__test__container__slider-prevbtn" />
-          <img src={right_arrow_icon} alt="" className="w__home__test__container__slider-nextBtn" />
-          <div className="w__home__test__container__slider-slide">
-            <img className="w__home__test__container__slider-slide-img" src={testimonials_p1} alt="" />
-            <div className="w__home__test__container__slider-slide__content">
-              <img className='w__home__test__container__slider-slide__content-quote' src={quote_icon} alt="" />
-              <div className="w__home__test__container__slider-slide__content-ratings">
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-              </div>
-              <p>Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.</p>
-              <div className="w__home__test__container__slider-slide__content-author">
-                <div className="w__home__test__container__slide-slide__content-author-details">
-                  <div style={{color: 'black'}}>Angela Taylor</div>
-                  <div style={{color:'grey'}}>Expecting to be Samsung CEO</div>
-                </div>
-                <img src={segment} alt="" />
-              </div>
-            </div>
-          </div>
+          {/* <img onClick={prevSlide} src={left_arrow_icon} alt="" className="w__home__test__container__slider-prevbtn" />
+          <img onClick={nextSlide} src={right_arrow_icon} alt="" className="w__home__test__container__slider-nextBtn" /> */}
+          <Slider {...sliderSettings}>
+            {
+              testimonials.map(t=>renderSlide(t))
+            }
+          </Slider>
         </div>
       </div>
     </div>

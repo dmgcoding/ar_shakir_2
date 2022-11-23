@@ -50,11 +50,21 @@
 .w__home__test__container__slider{
     position: relative;
     width: 100%;
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
     padding: 2rem 0;
+    overflow: visible;
+    /* border: 1px solid red; */
+}
+
+.w__home__test__container__slider-slides{
+    width: 100%;
+}
+
+.slick-next,.slick-prev{
+    border-radius: 50%!important;
+    background-color: grey!important;
+}
+.slick-next:hover,.slick-prev:hover{
+    background-color: rgb(54, 54, 54)!important;
 }
 
 .w__home__test__container__slider-prevbtn{
@@ -75,19 +85,20 @@
     cursor: pointer;
 }
 
-.w__home__test__container__slider-slide{
+.w__home__test__container__slider-slides-slide{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    transition: 0.3s ease-in-out;
 }
 
-.w__home__test__container__slider-slide-img{
-    width: 49%;
+.w__home__test__container__slider-slides-slide-img{
+    width: 49%!important;
 }
 
-.w__home__test__container__slider-slide__content{
+.w__home__test__container__slider-slides-slide__content{
     width: 49%;
     display: flex;
     flex-direction: column;
@@ -95,18 +106,18 @@
     align-items: flex-start;
 }
 
-.w__home__test__container__slider-slide__content img{
-    height: 1.5rem;
+.w__home__test__container__slider-slides-slide__content img{
+    height: 1.5rem!important;
 }
 
-.w__home__test__container__slider-slide__content-ratings{
+.w__home__test__container__slider-slides-slide__content-ratings{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 1.5rem 0;
 }
 
-.w__home__test__container__slider-slide__content p{
+.w__home__test__container__slider-slides-slide__content p{
     font-weight: 700;
     margin: 1rem 0;
     font-size: 30px;
@@ -115,22 +126,22 @@
     color: #1B1C31;
 }
 
-.w__home__test__container__slider-slide__content-author{
+.w__home__test__container__slider-slides-slide__content-author{
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 100%;
 }
 
-.w__home__test__container__slider-slide__content-author-details{
+.w__home__test__container__slider-slides-slide__content-author-details{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.02em;
 }
 
-.w__home__test__container__slider-slide__content-author img{
-    height: 2rem;
+.w__home__test__container__slider-slides-slide__content-author img{
+    height: 1.5rem!important;
 }
 
 

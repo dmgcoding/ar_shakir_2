@@ -35,7 +35,7 @@ const Pricing = () => {
     if(classbase === "box2") checkIcon = pricing_check_icon_bgwhite;
     return (
       <>
-      <div data-aos={`${classbase == 'box1' ? 'fade-right': 'fade-left'}`} data-aos-once='true' className={`w__home__pricing__container-boxes-${classbase}`}>
+      <div data-aos={`${classbase === 'box1' ? 'fade-right': 'fade-left'}`} data-aos-once='true' className={`w__home__pricing__container-boxes-${classbase}`}>
             <p className={`w__home__pricing__container-boxes-${classbase}-plan`}>
             {box.plan}
             </p>

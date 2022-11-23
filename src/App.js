@@ -6,7 +6,7 @@ import SignIn from './pages/signIn/SignIn';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/igrow'>
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/aboutus' element={<AboutUs />} />

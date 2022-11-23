@@ -43,5 +43,6 @@
   },
   "devDependencies": {
     "react-svg-loader": "^3.0.3"
-  }
+  },
+  "homepage": "http://localhost/igrow/"
 }
